@@ -1,0 +1,7 @@
+if (<%=@email.read%> == false) {
+  document.querySelector('.btn-light').textContent = "Marquer comme Lu";
+  document.querySelector('.remove-<%= @email.id %>').style.color = "";
+} else {
+  document.querySelector('.btn-light').textContent = "Marquer comme non-lu";
+  document.querySelector('.remove-<%= @email.id %>').style.color = "black";
+}

@@ -1,1 +1,5 @@
-<li> <strong>Object:</strong> <%= email.object %> </li>
+<a href='<%= email_path(email) %>' data-remote= 'true' >
+  <li class='remove-<%= email.id %>'>
+      <%= email.object %>
+  </li>
+</a>

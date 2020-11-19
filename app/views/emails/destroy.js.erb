@@ -1,4 +1,2 @@
-alert("le fichier JS est exécuté!");
-
-document.getElementById("email-show").remove();
-document.getElementById("email-new").remove();
+document.querySelector('.remove-<%= @email.id %>').remove();
+document.querySelector('#email-delete').remove();
