@@ -5,19 +5,23 @@
 
     <div class="col py-3 px-lg-5 border bg-light">
       <h3>Liste des emails</h3>
-
       <ul class="list-unstyled text-small">
         <% @emails.each do |email|  %>
         <div class="col py-2 mt-1 border bg-white">
         <li id="email-new">
-          <strong>Object:</strong> <%= email.object  %> 
+          <strong>Object : </strong> 
+          <%= link_to email.object, email_path(email.id), remote: true %>
         </li>
         </div>
         <% end %>
       </ul>
     </div>
 
-    <div class="col py-3 px-lg-5 border bg-light">Email sélectionné</div>
+    <div class="col py-3 px-lg-5 border bg-light">
+      <h3>Email sélectionné</h3>
+      <div class="col py-2 mt-1 border bg-white">
+        <p id="email-show"></p>
+    </div>
     </div>
     
   </div>
